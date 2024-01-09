@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li{
+            background-color: black;
+            color: white;
+            margin-bottom: -10px;
+            width:500px;
+            font-size: 150%;
+            color: rgb(90, 202, 90);
+            opacity: 0.5;
+            font-style: italic;
+            padding-left: 10px;
+        }
+        li:hover {opacity: 1;}
+        
+        .lst,.actionn{display: inline-block;margin-left: 20px;}
+        .actionn{
+            background-color: white;
+            width: 600px;
+            height: 750px;
+        }
+        .md{
+            /* padding: 50px; */
+            background-color: silver;
+        }
+        .scrn{
+            position: absolute;
+            top: 300px;
+            left: 800px;
+            width: 70px;
+            height: 150px;
+            background-color: rgb(176, 243, 221);
+            /* border: 2px solid red; */
+            /* right: 400px; */
+        }
+        input{
+            position: relative;
+            left: -30px;
+            top: 20px;
+        }
+        .i1:checked~.scrn{transform: none;}
+        .i2:checked~.scrn{transform: rotate(10deg);}
+        .i3:checked~.scrn{transform: rotate(45deg);}
+        .i4:checked~.scrn{transform: rotateX(45deg);}
+        .i5:checked~.scrn{transform: rotateX(100deg);}
+        .i6:checked~.scrn{transform: rotateY(45deg);}
+        .i66:checked~.scrn{transform: rotateY(80deg);}
+        .i7:checked~.scrn{transform: skew(20deg,20deg);}
+        .i8:checked~.scrn{transform: skew(30deg,30deg);}
+        .i9:checked~.scrn{transform: skewX(30deg);}
+        .i10:checked~.scrn{transform: skewX(40deg);}
+        .i11:checked~.scrn{transform: skewY(30deg);}
+        .i12:checked~.scrn{transform: skewY(40deg);}
+        .i13:checked~.scrn{transform: translate(20px,10px);}
+        .i14:checked~.scrn{transform: translate(20px,20px);}
+        .i15:checked~.scrn{transform: scale(2,2);}
+        .i16:checked~.scrn{transform: scale(2,3);}
+        .i17:checked~.scrn{transform: matrix(0.866,0.7,-0.866,0,0);}
+        .i18:checked~.scrn{transform: matrix(0.586,0.8,-0.586,0,0);}
+        .i19:checked~.scrn{transform: matrix(0.586,0.8,-0.8,0.586,40,30);}
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">CSS TRANSFORM</h1>
+
+    <div class="md">
+        <div class="lst">
+            <ul type="none">
+                <input type="radio" name="rdo" class="i1"/> 
+                <li class="i1"><span style="color: rgb(228, 84, 84);">transform :</span> none;</span></li>
+                <input type="radio" name="rdo" class="i2"/> 
+                <li class="i2"><span style="color: rgb(228, 84, 84);">transform :</span> rotate(10deg);</span></li>
+                <input type="radio" name="rdo" class="i3"/>
+                <li class="i3"> <span style="color: rgb(228, 84, 84);">transform :</span> rotate(45deg);</span></li>
+                <input type="radio" name="rdo" class="i4"/>
+                <li class="i4"> <span style="color: rgb(228, 84, 84);">transform :</span> rotateX(45deg);</span></li>
+                <input type="radio" name="rdo" class="i5"/>
+                <li class="i5"> <span><span style="color: rgb(228, 84, 84);">transform :</span> rotateX(100deg);</span></li>
+                <input type="radio" name="rdo" class="i6"/> 
+                <li class="i6"><span><span style="color: rgb(228, 84, 84);">transform :</span> rotateY(45deg);</span></li>
+                <input type="radio" name="rdo" class="i66"/>
+                <li class="i66"> <span><span style="color: rgb(228, 84, 84);">transform :</span> rotateY(80deg);</span></li>   
+                <input type="radio" name="rdo" class="i7"/>         
+                <li class="i7"> <span><span style="color: rgb(228, 84, 84);">transform :</span> skew(20deg,20deg);</span></li>
+                <input type="radio" name="rdo" class="i8"/> 
+                <li class="i8"><span><span style="color: rgb(228, 84, 84);">transform :</span> skew(30deg,30deg);</span></li>
+                <input type="radio" name="rdo" class="i9"/>
+                <li class="19"> <span><span style="color: rgb(228, 84, 84);">transform :</span> skewX(30deg);</span></li>
+                <input type="radio" name="rdo" class="i10"/>
+                <li class="i10"> <spna><span style="color: rgb(228, 84, 84);">transform :</span> skewX(40deg);</spna></li>
+                <input type="radio" name="rdo" class="i11"/>
+                <li class="i11"> <span><span style="color: rgb(228, 84, 84);">transform :</span> skewY(30deg);</span></li>
+                <input type="radio" name="rdo" class="i12"/>
+                <li class="i12"> <span><span style="color: rgb(228, 84, 84);">transform :</span> skewY(40deg);</span></li>
+                <input type="radio" name="rdo" class="i13"/>
+                <li class="i13"> <span><span style="color: rgb(228, 84, 84);">transform :</span> translate(20px,10px);</span></li>
+                <input type="radio" name="rdo" class="i14"/>
+                <li class="i14"> <span><span style="color: rgb(228, 84, 84);">transform :</span> translate(20px,20px);</span></li>
+                <input type="radio" name="rdo" class="i15"/>
+                <li class="i15"> <span><span style="color: rgb(228, 84, 84);">transform :</span> scale(2,2);</span></li>
+                <input type="radio" name="rdo" class="i16"/>
+                <li class="i16"> <span><span style="color: rgb(228, 84, 84);">transform :</span> scale(2,3);</span></li>
+                <input type="radio" name="rdo" class="i17"/>
+                <li class="i17"> <span><span style="color: rgb(228, 84, 84);">transform :</span> matrix(0.866,0.7,-0.866,0,0);</span></li>
+                <input type="radio" name="rdo" class="i18"/>
+                <li class="i18"> <span><span style="color: rgb(228, 84, 84);">transform :</span> matrix(0.586,0.8,-0.586,0,0);</span></li>
+                <input type="radio" name="rdo" class="i19"/>
+                <li class="i19"> <span><span style="color: rgb(228, 84, 84);">transform :</span> matrix(0.586,0.8,-0.8,0.586,40,30);</span></li>
+                <div class="scrn">See what different transform values does with this blue DIV element</div>
+            </ul>
+        </div>
+        <div class="actionn">
+    
+        </div>
+    </div>
+</body>
+</html>
